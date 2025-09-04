@@ -1,0 +1,419 @@
+
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;700&display=swap');
+
+
+
+/* قواعد عامة */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            text-decoration: none;
+        }
+
+        body {
+            background: #f2fdf8;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        :root {
+            --one-color: #96fddf;
+            --second-bg-color: #ce4472;
+           
+
+        }
+
+        /* تصميم الهيدر */
+        header {
+            position: relative;
+            display: flex; /* يجعل الهيدر صف أفقي */
+            justify-content: space-between; /* توزيع المساحات بين الأقسام */
+            align-items: center; /* محاذاة رأسية في الوسط */
+            background-color: transparent; /* خلفية شفافة */
+            padding: 10px 20px;
+            gap: 20px; /* فراغ بين الأقسام */
+            z-index: 1;
+        }
+
+        /* القسم اليساري - اللوجو */
+        .header-left img {
+            width: 65px; /* حجم اللوجو */
+            height: 65px;
+            object-fit: contain; /* الحفاظ على نسبة الصورة */
+            cursor: pointer;
+            border-radius: 50%; /* شكل دائري */
+            margin-left: 25px;
+            margin-top: -0px;
+            user-select: none;    /* ما ينفعش يتحدد */
+            caret-color: transparent; /* يخفي مؤشر الكتابة */
+            z-index: 999;
+        }
+
+        /* القسم الأوسط - القائمة */
+        .header-center {
+            background: var(--second-bg-color );
+            padding: 8px 20px;
+            border-radius: 8px; /* حواف مدورة */
+            display: flex;
+            gap: 25px; /* فراغ بين الروابط */
+            height: 40px;
+            align-items: center;
+            position: relative;
+        }
+
+        /* روابط القائمة */
+        .header-center a {
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 6px 12px;
+            border-radius: 8px; /* حواف مدورة لتناسب الخلفية */
+            transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+            position: relative;
+            cursor: pointer;
+            /* منع المؤشر عن الروابط */
+
+           user-select: none;
+           caret-color: transparent;
+           font-weight: 700;
+           
+
+
+        }
+
+        /* التأثير عند التفعيل على روابط القائمة */
+        .header-center a.active {
+            background-color: white; /* خلفية بيضاء */
+            color: #333; /* لون نص رمادي غامق */
+            /* ظل داخلي متموج لإعطاء تأثير مقعر */
+            box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3),
+                        inset 0 -4px 6px rgba(255, 255, 255, 0.7);
+        }
+
+        /* القسم اليميني - الأيقونات */
+        .header-right {
+            display: flex;
+            gap: 15px; /* فراغ بين الأيقونات */
+            background: var(--second-bg-color);
+            width: 150px;
+            height: 40px;
+            border-radius: 14px; /* حواف مستديرة */
+            margin-right: 25px;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 0 10px; 
+            
+        }
+
+        /* تصميم الأيقونات */
+        .header-right .icon-btn {
+            background-color: transparent; /* شفاف لتبرز خلفية القسم */
+            border-radius: 14px; /* نفس نصف قطر الخلفية الخارجية */
+            width: 33px;
+            height: 33px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            color: #ddd; /* لون رمادي فاتح */
+            font-size: 18px;
+            position: relative;
+            transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+            user-select: none;
+            caret-color: transparent;
+        }
+
+        /* التأثير عند الضغط أو التفعيل على الأيقونات */
+        .header-right .icon-btn.active {
+            background-color: white; /* خلفية بيضاء */
+            color: #333; /* لون الأيقونة */
+            /* ظل داخلي متموج لإعطاء تأثير مقعر */
+            box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3),
+                        inset 0 -4px 6px rgba(255, 255, 255, 0.7);
+        }
+
+
+        /* ======= تصميم متجاوب ======= */
+
+@media (max-width: 1120px) { 
+   
+    header { 
+        padding: 10px 10px;          /* تقليل الحشوة الجانبية */
+    } 
+ 
+    .header-left img { 
+              /* إزالة المسافة العلوية */
+        width: 65px;             /* تصغير حجم اللوجو قليلاً */
+        height: 65px; 
+    } 
+ 
+    .header-center { 
+        padding: 6px 15px;       /* تقليل الحشوة الداخلية */
+        height: auto;            /* ارتفاع تلقائي ليناسب المحتوى */
+        gap: 15px;               /* تقليل المسافة بين روابط التنقل */
+        justify-content: center; /* توسيط روابط التنقل داخل الهيدر */
+    } 
+ 
+    .header-center a { 
+        font-size: 14px;         /* تصغير حجم الخط للروابط */
+        padding: 5px 10px;       /* تقليل حشوة الروابط لجعلها مناسبة للشاشة */
+    } 
+ 
+    .header-right { 
+        width: auto;             /* السماح بعرض تلقائي للقسم */
+        padding: 0 10px;         /* حشوة جانبية مناسبة */
+        gap: 10px;               /* تقليل الفراغ بين الأيقونات */
+        height: 40px;            /* ثبات ارتفاع القسم */
+        margin-right: 15px;        
+    } 
+ 
+    .header-right .icon-btn { 
+        width: 35px;             /* تصغير عرض الأيقونات */
+        height: 35px;            /* تصغير ارتفاع الأيقونات */
+        font-size: 16px;         /* تصغير حجم أيقونات الخط */
+    } 
+} 
+
+
+
+ @media (max-width: 870px){
+    .header-left img{
+        width: 59px;
+        height: 59px;
+       
+    }
+    .header-right .icon-btn{
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+ }
+
+
+
+ @media (max-width: 850px){
+    .header-center{
+        padding: 5px 12px;       /* تقليل الحشوة الداخلية */
+        gap: 11px
+          
+    }
+    .header-center{
+        height: 40px;
+    }
+
+    .header-center a { 
+        font-size: 13px;         /* تصغير حجم الخط للروابط */
+        padding: 4px 10px; 
+    }
+ }
+
+
+
+
+ @media (max-width: 770px){
+    header{
+        gap: 5px;        
+    }
+   
+     .header-center{
+        padding: 3px 9px;
+        gap: 7px;
+       
+     }
+      .header-center a {
+           
+            font-size: 11px;
+           
+        }
+    .header-right {
+           
+            gap: 8px; /* فراغ بين الأيقونات */       
+            width: 100px;
+            height: 40px;
+            
+    }
+
+    .header-right .icon-btn {         
+            width: 30px;
+            height: 30px;
+            font-size: 11px;
+    }
+ }
+
+
+
+@media (max-width: 660px) { 
+   header{
+        gap: 3.5px;        
+    }
+    .header-center{
+        padding: 2.8px 7px;
+        gap: 5px;
+        height: 39px;
+       
+     }
+     .header-center a {       
+            font-size: 9px;          
+        }
+     .header-right {        
+            gap: 6px;
+            width: 93px;
+            height: 39px;
+     }
+     .header-right .icon-btn {         
+            width: 25px;
+            height: 25px;
+            font-size: 9px;
+    }
+
+}
+
+@media (max-width: 590px){
+    header{
+        gap: 3px;        
+    }
+     .header-left img {
+            width: 53px;
+            height: 53px; 
+           
+     }
+       .header-center{
+        padding: 2px 6px;
+        gap: 4px;
+        height: 35px;       
+     }
+     .header-center a {       
+            font-size: 8.5px;          
+        }
+     .header-right {        
+            gap: 4px;
+            width: 89px;
+            height: 35px;
+     }
+     .header-right .icon-btn {         
+            width: 24px;
+            height: 24px;
+            font-size: 7.5px;
+    }
+}
+
+
+@media (max-width: 555px) {
+    .header-center {
+        position: fixed;        /* تثبيت في أسفل الصفحة */
+        bottom: 0;              /* ملاصقة للحافة السفلية */
+        left: 50%;              /* وسط الشاشة أفقياً */
+        transform: translateX(-50%); /* تصحيح التوسيط */
+        width: 97%;             /* 90% من العرض */
+        border-radius: 17px 17px 0 0; /* الحافتين العلويتين دائريتين */
+        justify-content: center; /* الروابط في الوسط */
+        height: auto;           /* ارتفاع تلقائي */
+        padding: 10px;          /* مسافة داخلية */
+        z-index: 999;           /* تبقى فوق العناصر */
+    }
+
+       /* روابط القائمة */
+           .header-center a {
+            font-weight: 600;
+            font-size: 12px;
+            padding: 6px 12px;
+            gap: 5px;
+        }
+  
+}
+@me
+dia (max-width: 440px){
+     .header-center a {
+            font-weight: 600;
+            font-size: 10px;
+            padding: 6px 12px;
+            gap: 5px;
+        }
+
+}
+
+@media (max-width: 386px){
+     .header-center a{
+         font-size: 9px;
+         gap: 5px;
+
+     }
+}
+
+
+
+
+.home-1 {
+  width: 75%; 
+  height: 100vh; /* ياخد طول الشاشة */ 
+  display: flex; 
+  flex-direction: row;  
+  justify-content: space-between; /* محاذاة رأسية للنصوص */ 
+  align-items: center; /* يبدأ من اليسار */ 
+  box-sizing: border-box; 
+  text-align: left; 
+  position: relative; 
+  transform: translateY(-10%); /* يرفع المحتوى شويه لفوق */ 
+  margin: 0 auto; /* يخلي البلوك في النص (المسافة الزيادة تتوزع يمين ويسار) */
+}
+
+
+.home-1 h1 {
+  color: var(--second-bg-color); /* لون العنوان */
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  width: 450px;
+  font-weight: 700;
+  font-size: 2.5rem;
+ 
+}
+
+.home-1 .text p {
+  color: black; /* درجة أفتح للنصوص */
+  font-size: 1.2rem;
+  margin: 0.3rem 0;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.home-1 .shop-btn {
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background-color: #e85b88; /* زر بلون أفتح */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: 700;
+}
+
+.home-1 .shop-btn:hover {
+  background-color: #b6365b; /* أغمق عند الهوفر */
+}
+
+
+.home-1 #right{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+ #canvas{
+    width:90%;
+    height: 85%;  
+
+}
+
+
+
+
+
