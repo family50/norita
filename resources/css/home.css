@@ -179,130 +179,10 @@
 
 
 
- @media (max-width: 870px){
-    .header-left img{
-        width: 59px;
-        height: 59px;
-       
-    }
-    .header-right .icon-btn{
-        width: 30px;
-        height: 30px;
-        font-size: 15px;
-    }
-
- }
+ 
 
 
-
- @media (max-width: 850px){
-    .header-center{
-        padding: 5px 12px;       /* تقليل الحشوة الداخلية */
-        gap: 11px
-          
-    }
-    .header-center{
-        height: 40px;
-    }
-
-    .header-center a { 
-        font-size: 13px;         /* تصغير حجم الخط للروابط */
-        padding: 4px 10px; 
-    }
- }
-
-
-
-
- @media (max-width: 770px){
-    header{
-        gap: 5px;        
-    }
-   
-     .header-center{
-        padding: 3px 9px;
-        gap: 7px;
-       
-     }
-      .header-center a {
-           
-            font-size: 11px;
-           
-        }
-    .header-right {
-           
-            gap: 8px; /* فراغ بين الأيقونات */       
-            width: 100px;
-            height: 40px;
-            
-    }
-
-    .header-right .icon-btn {         
-            width: 30px;
-            height: 30px;
-            font-size: 11px;
-    }
- }
-
-
-
-@media (max-width: 660px) { 
-   header{
-        gap: 3.5px;        
-    }
-    .header-center{
-        padding: 2.8px 7px;
-        gap: 5px;
-        height: 39px;
-       
-     }
-     .header-center a {       
-            font-size: 9px;          
-        }
-     .header-right {        
-            gap: 6px;
-            width: 93px;
-            height: 39px;
-     }
-     .header-right .icon-btn {         
-            width: 25px;
-            height: 25px;
-            font-size: 9px;
-    }
-
-}
-
-@media (max-width: 590px){
-    header{
-        gap: 3px;        
-    }
-     .header-left img {
-            width: 53px;
-            height: 53px; 
-           
-     }
-       .header-center{
-        padding: 2px 6px;
-        gap: 4px;
-        height: 35px;       
-     }
-     .header-center a {       
-            font-size: 8.5px;          
-        }
-     .header-right {        
-            gap: 4px;
-            width: 89px;
-            height: 35px;
-     }
-     .header-right .icon-btn {         
-            width: 24px;
-            height: 24px;
-            font-size: 7.5px;
-    }
-}
-
-
-@media (max-width: 555px) {
+@media (max-width: 1083px) {
     .header-center {
         position: fixed;        /* تثبيت في أسفل الصفحة */
         bottom: 0;              /* ملاصقة للحافة السفلية */
@@ -319,19 +199,24 @@
        /* روابط القائمة */
            .header-center a {
             font-weight: 600;
-            font-size: 12px;
+            font-size: 14px;
             padding: 6px 12px;
             gap: 5px;
         }
   
 }
-@me
-dia (max-width: 440px){
+@media (max-width: 538px){
      .header-center a {
             font-weight: 600;
-            font-size: 10px;
+            font-size: 11px;
             padding: 6px 12px;
             gap: 5px;
+        }}
+
+@media (max-width: 470px){
+     .header-center a {
+           
+            gap: 4px;
         }
 
 }
@@ -359,6 +244,7 @@ dia (max-width: 440px){
   position: relative; 
   transform: translateY(-10%); /* يرفع المحتوى شويه لفوق */ 
   margin: 0 auto; /* يخلي البلوك في النص (المسافة الزيادة تتوزع يمين ويسار) */
+  
 }
 
 
@@ -368,7 +254,7 @@ dia (max-width: 440px){
   margin-bottom: 1rem;
   width: 450px;
   font-weight: 700;
-  font-size: 2.5rem;
+ 
  
 }
 
@@ -377,7 +263,7 @@ dia (max-width: 440px){
   font-size: 1.2rem;
   margin: 0.3rem 0;
   font-weight: 400;
-  font-size: 1.2rem;
+  
 }
 
 .home-1 .shop-btn {
@@ -399,8 +285,10 @@ dia (max-width: 440px){
 
 
 .home-1 #right{
-    width: 80%;
-    height: 80%;
+    width: auto;
+    height: 100vh;
+    
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -408,12 +296,136 @@ dia (max-width: 440px){
 }
 
  #canvas{
-    width:90%;
-    height: 85%;  
+    width: 100%;
+    height: 85%; 
+
+}
+ 
+ 
+@media (max-width: 1325px){
+    .home-1 h1{
+        font-size: 2rem;
+        width: 390px;
+    }
+    .home-1 .text p{
+        font-size: 1.2rem;
+        
+    }
+.home-1 .shop-btn{
+   padding: 0.8rem 2rem;
+   font-size: 1rem;
 
 }
 
+}
+@media (max-width: 1251px){
+    .home-1 h1{
+        font-size: 2rem;
+        width: 380px;
+    }
+    .home-1 .text p{
+        font-size: 1.2rem;
+        
+    }
+.home-1 .shop-btn{
+   padding: 0.8rem 2rem;
+   font-size: 1rem;
+    
+}
 
+}
+@media (max-width: 1239px){
+     .home-1 h1{
+        font-size: 2rem;
+        width: 370px;
+    }
+} 
+@media (max-width: 1228px){
+     .home-1 h1{
+        font-size: 1.9rem;
+        width: 350px;
+    }
+      .home-1 .text p{
+        font-size: 1.1rem;
+        
+    }
+.home-1 .shop-btn{
+   padding: 0.69rem 1.85rem;
+   font-size: 1rem;
+    
+
+}}
+
+@media (max-width: 1205px){
+     .home-1 h1{
+        font-size: 1.8rem;
+        width: 330px;
+    }
+      .home-1 .text p{
+        font-size: 0.9rem;
+        
+    }
+.home-1 .shop-btn{
+   padding: 0.7rem 1.9rem;
+   font-size: 1rem;
+    
+}
+
+}
+
+@media (max-width: 1183px){
+     .home-1 h1{
+        font-size: 1.75rem;
+        width: 310px;
+    }
+      .home-1 .text p{
+        font-size: 0.85rem;
+        
+    }
+.home-1 .shop-btn{
+   padding: 0.65rem 1.85rem;
+   font-size: 1rem;
+    
+}
+}
+
+@media (max-width: 1160px){
+     .home-1 h1{
+        font-size: 1.7rem;
+        width: 290px;
+    }
+      .home-1 .text p{
+        font-size: 0.8rem;
+        
+    }
+.home-1 .shop-btn{
+   padding: 0.6rem 1.8rem;
+   font-size: 1rem;
+    
+}
+}
+
+@media (max-width: 1137px){
+     .home-1 h1{
+        font-size: 1.7rem;
+        width: 290px;
+    }
+      .home-1 .text p{
+        font-size: 1rem;
+    }
+    .home-1 {
+  width: 84%; 
+}
+  
+ }
+
+@media (max-width: 1083px){
+    
+ 
+  
+ }
+
+    
 
 
 
