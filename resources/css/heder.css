@@ -1,0 +1,203 @@
+ /* تصميم الهيدر */
+        #app-header  {
+            position: relative;
+            display: flex; /* يجعل الهيدر صف أفقي */
+            justify-content: space-between; /* توزيع المساحات بين الأقسام */
+            align-items: center; /* محاذاة رأسية في الوسط */
+            background-color: transparent; /* خلفية شفافة */
+            padding: 10px 20px;
+            gap: 20px; /* فراغ بين الأقسام */
+            z-index: 1;
+        }
+
+        /* القسم اليساري - اللوجو */
+         #app-header  .header-left img {
+            width: 65px; /* حجم اللوجو */
+            height: 65px;
+            object-fit: contain; /* الحفاظ على نسبة الصورة */
+            cursor: pointer;
+            border-radius: 50%; /* شكل دائري */
+            margin-left: 25px;
+            margin-top: -0px;
+            user-select: none;    /* ما ينفعش يتحدد */
+            caret-color: transparent; /* يخفي مؤشر الكتابة */
+            z-index: 999;
+        }
+
+        /* القسم الأوسط - القائمة */
+         #app-header   .header-center {
+            background: var(--second-bg-color );
+            padding: 8px 20px;
+            border-radius: 8px; /* حواف مدورة */
+            display: flex;
+            gap: 25px; /* فراغ بين الروابط */
+            height: 40px;
+            align-items: center;
+            position: relative;
+        }
+
+        /* روابط القائمة */
+          #app-header     .header-center a {
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 6px 12px;
+            border-radius: 8px; /* حواف مدورة لتناسب الخلفية */
+            transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+            position: relative;
+            cursor: pointer;
+            /* منع المؤشر عن الروابط */
+
+           user-select: none;
+           caret-color: transparent;
+           font-weight: 700;
+           
+
+
+        }
+
+        /* التأثير عند التفعيل على روابط القائمة */
+        #app-header  .header-center a.active {
+            background-color: white; /* خلفية بيضاء */
+            color: #333; /* لون نص رمادي غامق */
+            /* ظل داخلي متموج لإعطاء تأثير مقعر */
+            box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3),
+                        inset 0 -4px 6px rgba(255, 255, 255, 0.7);
+        }
+
+        /* القسم اليميني - الأيقونات */
+        #app-header   .header-right {
+            display: flex;
+            gap: 15px; /* فراغ بين الأيقونات */
+            background: var(--second-bg-color);
+            width: 150px;
+            height: 40px;
+            border-radius: 14px; /* حواف مستديرة */
+            margin-right: 25px;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 0 10px; 
+            
+        }
+
+        /* تصميم الأيقونات */
+         #app-header   .header-right .icon-btn {
+            background-color: transparent; /* شفاف لتبرز خلفية القسم */
+            border-radius: 14px; /* نفس نصف قطر الخلفية الخارجية */
+            width: 33px;
+            height: 33px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            color: #ddd; /* لون رمادي فاتح */
+            font-size: 18px;
+            position: relative;
+            transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+            user-select: none;
+            caret-color: transparent;
+        }
+
+        /* التأثير عند الضغط أو التفعيل على الأيقونات */
+         #app-header    .header-right .icon-btn.active {
+            background-color: white; /* خلفية بيضاء */
+            color: #333; /* لون الأيقونة */
+            /* ظل داخلي متموج لإعطاء تأثير مقعر */
+            box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3),
+                        inset 0 -4px 6px rgba(255, 255, 255, 0.7);
+        }
+
+
+        /* ======= تصميم متجاوب ======= */
+
+@media (max-width: 1120px) { 
+   
+    #app-header  { 
+        padding: 10px 10px;          /* تقليل الحشوة الجانبية */
+    } 
+ 
+   #app-header  .header-left img { 
+              /* إزالة المسافة العلوية */
+        width: 65px;             /* تصغير حجم اللوجو قليلاً */
+        height: 65px; 
+    } 
+ 
+    #app-header    .header-center { 
+        padding: 6px 15px;       /* تقليل الحشوة الداخلية */
+        height: auto;            /* ارتفاع تلقائي ليناسب المحتوى */
+        gap: 15px;               /* تقليل المسافة بين روابط التنقل */
+        justify-content: center; /* توسيط روابط التنقل داخل الهيدر */
+    } 
+ 
+    #app-header   .header-center a { 
+        font-size: 14px;         /* تصغير حجم الخط للروابط */
+        padding: 5px 10px;       /* تقليل حشوة الروابط لجعلها مناسبة للشاشة */
+    } 
+ 
+     #app-header   .header-right { 
+        width: auto;             /* السماح بعرض تلقائي للقسم */
+        padding: 0 10px;         /* حشوة جانبية مناسبة */
+        gap: 10px;               /* تقليل الفراغ بين الأيقونات */
+        height: 40px;            /* ثبات ارتفاع القسم */
+        margin-right: 15px;        
+    } 
+ 
+    #app-header   .header-right .icon-btn { 
+        width: 35px;             /* تصغير عرض الأيقونات */
+        height: 35px;            /* تصغير ارتفاع الأيقونات */
+        font-size: 16px;         /* تصغير حجم أيقونات الخط */
+    } 
+} 
+
+
+
+ 
+
+
+@media (max-width: 1083px) {
+    #app-header    .header-center {
+        position: fixed;        /* تثبيت في أسفل الصفحة */
+        bottom: 0;              /* ملاصقة للحافة السفلية */
+        left: 50%;              /* وسط الشاشة أفقياً */
+        transform: translateX(-50%); /* تصحيح التوسيط */
+        width: 97%;             /* 90% من العرض */
+        border-radius: 17px 17px 0 0; /* الحافتين العلويتين دائريتين */
+        justify-content: center; /* الروابط في الوسط */
+        height: auto;           /* ارتفاع تلقائي */
+        padding: 10px;          /* مسافة داخلية */
+        z-index: 999;           /* تبقى فوق العناصر */
+    }
+
+       /* روابط القائمة */
+           .header-center a {
+            font-weight: 600;
+            font-size: 14px;
+            padding: 6px 12px;
+            gap: 5px;
+        }
+  
+}
+@media (max-width: 538px){
+     #app-header   .header-center a {
+            font-weight: 600;
+            font-size: 11px;
+            padding: 6px 12px;
+            gap: 5px;
+        }}
+
+@media (max-width: 470px){
+     #app-header  .header-center a {
+           
+            gap: 4px;
+        }
+
+}
+
+@media (max-width: 386px){
+    #app-header   .header-center a{
+         font-size: 9px;
+         gap: 5px;
+
+     }
+}

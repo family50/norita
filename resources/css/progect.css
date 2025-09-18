@@ -1,0 +1,23 @@
+ /* قواعد عامة */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            text-decoration: none;
+        }
+
+        body {
+            background: #f2fdf8;
+            font-family: 'Tajawal', sans-serif;
+             overflow-x: hidden;
+        }
+
+        :root {
+            --one-color: #96fddf;
+            --second-bg-color: #ce4472;
+           
+
+        }
+
+        
