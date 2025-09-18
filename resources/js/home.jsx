@@ -63,49 +63,47 @@ function Home() {
       }
       
       else if (screenWidth <= 833) {
-        model.scale.set(0.40, 0.40, 0.40)
+        model.scale.set(0.45, 0.45, 0.45)
          model.position.set(-0.6, -0.4, 0);
       }
       else if (screenWidth <= 855) {
-        model.scale.set(0.43, 0.43, 0.43)
+        model.scale.set(0.48, 0.48, 0.48)
       }
       
       else if (screenWidth <= 888) {
-        model.scale.set(0.46, 0.46, 0.46)
+        model.scale.set(0.50, 0.50, 0.50)
         model.position.set(-0.5, -0.4, 0);
       }
       
       else if (screenWidth <= 950) {
-        model.scale.set(0.43, 0.43, 0.43)
+        model.scale.set(0.52, 0.52, 0.52)
         
       }
       
       
       else if (screenWidth <= 1020) {
-         model.scale.set(0.42, 0.42, 0.42);
+         model.scale.set(0.56, 0.56, 0.56);
          
         
       }
       
       else if (screenWidth <= 1082) {
-        model.scale.set(0.45, 0.45, 0.45);
-         ;
-      }else if (screenWidth <= 1114) {
-        model.scale.set(0.48, 0.48, 0.48);
-      } 
+        model.scale.set(0.59, 0.59, 0.59);
+         
+      }
       else if (screenWidth <= 1205) {
-         model.scale.set(0.51, 0.51, 0.51);
+         model.scale.set(0.63, 0.63, 0.63);
       }
       
       else if (screenWidth <= 1228) {
-        model.scale.set(0.54, 0.54, 0.54);
+        model.scale.set(0.65, 0.65, 0.65);
       }
       
       else if (screenWidth <= 1325) {
-        model.scale.set(0.57, 0.57, 0.57);
+        model.scale.set(0.67, 0.67, 0.67);
         model.position.set(-0.25, -0.5, 0);
       } else {
-        model.scale.set(0.60, 0.60, 0.60);
+        model.scale.set(0.69, 0.69, 0.69);
         model.position.set(0.10, -0.5, 0);
         model.rotation.set(-0.1, -0.2, 0.1);
       }
