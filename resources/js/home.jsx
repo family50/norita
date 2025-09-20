@@ -60,11 +60,60 @@ function Home() {
 
       if (screenWidth <= 59) {
         model.scale.set(0.4, 0.4, 0.4);
+        model.position.set(-1.5, 0.2, 0);
+      
+      }else if (screenWidth <= 399) {
+         model.scale.set(0.18, 0.18, 0.18)
+         model.position.set(-1.9, 1, 0);
+          model.rotation.set(0, 0, -0.01);
+        
+      }
+      else if (screenWidth <= 403) {
+         model.scale.set(0.22, 0.22, 0.22)
+         model.position.set(-1.9, 0.79, 0);
+          model.rotation.set(0, 0, -0.008);
+        
+      }
+      else if (screenWidth <= 414) {
+         model.scale.set(0.25, 0.25, 0.25)
+         model.position.set(-1.85, 0.52, 0);
+        
+      }
+      else if (screenWidth <= 442) {
+         model.scale.set(0.26, 0.26, 0.26)
+         model.position.set(-1.7, 0.46, 0);
+        
+      }
+      else if (screenWidth <= 447) {
+         model.scale.set(0.26, 0.26, 0.26)
+         model.position.set(-1.7, 0.39, 0);
+        
       }
       
-      else if (screenWidth <= 833) {
-        model.scale.set(0.45, 0.45, 0.45)
-         model.position.set(-0.6, -0.4, 0);
+      else if (screenWidth <= 478) {
+         model.scale.set(0.28, 0.28, 0.28)
+         model.position.set(-1.6, 0.3, 0);
+        
+      }
+      
+      else if (screenWidth <= 523) {
+         model.scale.set(0.31, 0.31, 0.31)
+         model.position.set(-1.5, 0.2, 0);
+        
+      }
+      
+      else if (screenWidth <= 601) {
+         model.scale.set(0.34, 0.34, 0.34)
+         model.position.set(-1.2, 0.2, 0);
+        
+      }
+      else if (screenWidth <= 721) {
+         model.scale.set(0.39, 0.39, 0.39)
+        model.position.set(-1, -0.3, 0);
+        
+      }else if (screenWidth <= 805) {
+        model.rotation.set(0, 0, 0);
+         model.scale.set(0.45, 0.45, 0.45)
       }
       else if (screenWidth <= 855) {
         model.scale.set(0.48, 0.48, 0.48)
@@ -127,17 +176,20 @@ function Home() {
   <div  className="home">
     {/* القسم اليسار */}
     <div id="lift">
-      <div className="Norita">
+
+      <div id="norita">
       <div>
         <h1>Norita — All Your Office Supplies in One Place</h1>
       </div>
       <div className="text">
         <p>From daily essentials to the latest school supplies.</p>
         <p>Shop with ease and get it delivered to your doorstep.</p>
+      </div>  
       </div>
-      </div>
+      <div id="b">
       <div>
         <button className="shop-btn">Shop Now</button>
+      </div>
       </div>
     </div>
 
@@ -146,6 +198,7 @@ function Home() {
       <div
         id="canvas"
         ref={canvasRef}
+       
         
        
       ></div>

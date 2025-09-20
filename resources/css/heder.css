@@ -113,15 +113,18 @@
 
 @media (max-width: 1120px) { 
    
-    #app-header  { 
-        padding: 10px 10px;          /* تقليل الحشوة الجانبية */
-    } 
- 
-   #app-header  .header-left img { 
-              /* إزالة المسافة العلوية */
-        width: 65px;             /* تصغير حجم اللوجو قليلاً */
-        height: 65px; 
-    } 
+   #app-header  .header-left img {
+            width: 65px; /* حجم اللوجو */
+            height: 65px;
+            object-fit: contain; /* الحفاظ على نسبة الصورة */
+            cursor: pointer;
+            border-radius: 50%; /* شكل دائري */
+            margin-left: 25px;
+            margin-top: -0px;
+            user-select: none;    /* ما ينفعش يتحدد */
+            caret-color: transparent; /* يخفي مؤشر الكتابة */
+            z-index: 999;
+        }
  
     #app-header    .header-center { 
         padding: 6px 15px;       /* تقليل الحشوة الداخلية */
@@ -156,6 +159,8 @@
 
 
 @media (max-width: 1083px) {
+
+    
     #app-header    .header-center {
         position: fixed;        /* تثبيت في أسفل الصفحة */
         bottom: 0;              /* ملاصقة للحافة السفلية */
@@ -185,14 +190,60 @@
             padding: 6px 12px;
             gap: 5px;
         }}
+@media (max-width: 1120px) {
+    #app-header  .header-left img { 
+              /* إزالة المسافة العلوية */
+        width: 50px;             /* تصغير حجم اللوجو قليلاً */
+        height: 50px; 
+    } 
+     #app-header   .header-right { 
+        width: auto;             /* السماح بعرض تلقائي للقسم */
+        padding: 0 10px;         /* حشوة جانبية مناسبة */
+        gap: 10px;               /* تقليل الفراغ بين الأيقونات */
+        height: 40px;            /* ثبات ارتفاع القسم */
+        margin-right: 15px;        
+    } 
+ 
+    #app-header   .header-right .icon-btn { 
+        width: 35px;             /* تصغير عرض الأيقونات */
+        height: 35px;            /* تصغير ارتفاع الأيقونات */
+        font-size: 16px;         /* تصغير حجم أيقونات الخط */
+    } 
+} 
+
+
+
+
 
 @media (max-width: 470px){
-     #app-header  .header-center a {
-           
-            gap: 4px;
-        }
+    
 
-}
+     #app-header   .header-right { 
+        width: auto;             /* السماح بعرض تلقائي للقسم */
+        padding: 0 7px;         /* حشوة جانبية مناسبة */
+        gap: 8px;               /* تقليل الفراغ بين الأيقونات */
+        height: 30px;            /* ثبات ارتفاع القسم */
+        margin-right: 10px;  
+        margin-top: 10px;     
+    } 
+ 
+    #app-header   .header-right .icon-btn { 
+        width: 35px;             /* تصغير عرض الأيقونات */
+        height: 35px;            /* تصغير ارتفاع الأيقونات */
+        font-size: 16px;         /* تصغير حجم أيقونات الخط */
+    } 
+    #app-header  .header-left img {
+           
+            
+           width: 40PX;
+           height: 40PX;
+            margin-left: 2px;
+            margin-top: -0px;
+          
+        }
+} 
+
+
 
 @media (max-width: 386px){
     #app-header   .header-center a{
